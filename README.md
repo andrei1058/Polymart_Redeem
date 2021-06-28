@@ -84,4 +84,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 ```
-Then you can start your bot with `npm run dev`
+Then `npx prisma generate` and you can start your bot with `npm run dev`
