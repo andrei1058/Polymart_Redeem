@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model polymart_reedems_from_discord {
+  id              Int      @id @default(autoincrement())
+  discord_user_id Int
+  resource_id     Int
+  redeem_date     DateTime @default(now()) @db.Timestamp(0)
+  polymart_user   Int
+}
