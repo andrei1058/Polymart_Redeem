@@ -54,7 +54,7 @@ abstract class AppDiscord {
             if (verdict) {
                 let timedRequest = myhash[cmd.member.user.id];
                 if (timedRequest === undefined) {
-                    return cmd.reply("There isn't any pending requests. Use .redeemOnPolymart to reedem your copy.");
+                    return cmd.reply("There isn't any pending requests. Use .redeemOnPolymart to redeem your copy.");
                 }
                 cmd.reply(this.buildEmbed('Request cancelled!', cmd.author));
                 delete myhash[cmd.member.user.id];
@@ -68,7 +68,7 @@ abstract class AppDiscord {
             if (verdict) {
                 let timedRequest = myhash[cmd.member.user.id];
                 if (timedRequest === undefined) {
-                    return cmd.reply("There isn't any pending requests. Use .redeemOnPolymart to reedem your copy.");
+                    return cmd.reply("There isn't any pending requests. Use .redeemOnPolymart to redeem your copy.");
                 }
                 let post = await addBuyerOnPolymart(Number(timedRequest.id), Number(process.env.RESOURCE_ID));
                 if (post === undefined || post === null) {
@@ -95,9 +95,9 @@ abstract class AppDiscord {
             .setAuthor('', '', 'https://polymart.org')
             .setThumbnail(client.user.displayAvatarURL())
             .addFields(
-                { name: 'You are about to reedem a copy of ' + BotAssets.name + ' on polymart.org', value: 'Make sure you have an account first!' },
+                { name: 'You are about to redeem a copy of ' + BotAssets.name + ' on polymart.org', value: 'Make sure you have an account first!' },
                 { name: '\u200B', value: '\u200B' },
-                { name: 'Command usage:', value: '.reedemOnPolymart myPolymartUserId', inline: true },
+                { name: 'Command usage:', value: '.redeemOnPolymart myPolymartUserId', inline: true },
                 { name: '\u200B', value: '\u200B', inline: true },
                 { name: '\u200B', value: '\u200B' },
                 { name: '\u200B', value: 'Go on your profile and get the last numbers after the dot.' },
