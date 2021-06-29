@@ -1,6 +1,10 @@
 # Polymart_Redeem
 Redeem a product once per discord account based on your role.
 
+![Capture1](.github/capture1.png)
+![Capture2](.github/capture2.png)
+![Capture3](.github/capture3.png)
+
 # Inslallation
 You need to create a `.env` file with the following environment variables:
 ```properties
